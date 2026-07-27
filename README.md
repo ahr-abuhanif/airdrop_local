@@ -1,83 +1,108 @@
-╔══════════════════════════════════════════════════════════╗
-║           📡 LocalDrop — Wireless File Transfer           ║
-╚══════════════════════════════════════════════════════════╝
+# 📡 LocalDrop — Wireless File Transfer
 
-Transfer files between your iPhone and PC over Wi-Fi.
-No internet. No cables. No apps to install on iPhone.
+<div align="center">
 
+![Python Version](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-4682B4?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-brightgreen?style=for-the-badge)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  REQUIREMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**Seamless, lightning-fast wireless file transfer between your iPhone and PC.**  
+*No internet required • No cables • Zero apps to install on iPhone*
 
-  • Python 3.8 or newer  (comes built-in on most PCs/Macs)
-  • iPhone and PC on the SAME Wi-Fi network
-  • Optional: pip install qrcode   (for a QR code in terminal)
+</div>
 
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  HOW TO START
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## ⚡ Overview
 
-  1. Double-click  start_localdrop.bat  (Windows)
-     — or —
-     Open Terminal and run:  python3 server.py
+**LocalDrop** brings an AirDrop-like experience to Windows, Linux, and macOS setups. By hosting an ultra-lightweight, embedded web server on your computer, LocalDrop lets you transfer photos, videos, documents, and files directly over your local Wi-Fi network in seconds.
 
-  2. A URL like  http://192.168.x.x:8765  will appear.
+Everything stays strictly inside your local home network — no third-party cloud servers, no bandwidth throttling, and complete privacy.
 
-  3. Scan the QR code with your iPhone camera
-     — or type the URL into Safari manually.
+---
 
-  4. Transfer files!
+## ✨ Key Features
 
+- **📱 Zero App Installation:** Operates directly inside Safari or any mobile browser on iOS.
+- **⚡ Maximum Local Speed:** Transfers files at native Wi-Fi speeds without cloud bottlenecking.
+- **🔒 100% Private & Offline:** Data never leaves your local area network (LAN).
+- **🔄 Two-Way Transfer:**
+  - **iPhone ➔ PC:** Tap to send photos, videos, or files directly to `~/LocalDrop_Received/`.
+  - **PC ➔ iPhone:** Place files in `~/LocalDrop_Share/` and download them with a single tap.
+- **📷 Terminal QR Code:** Scan the automatically generated terminal QR code with your iPhone camera to instantly connect.
+- **📦 Zero Heavy Dependencies:** Built on Python's native standard library with a sleek, responsive dark-mode UI embedded.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  TRANSFER FILES: iPhone → PC
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+---
 
-  On your iPhone:
-  → Tap "Send to PC" tab
-  → Tap the upload area and pick photos/files
-  → Files are saved to:  ~/LocalDrop_Received/
+## 📋 Requirements
 
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  TRANSFER FILES: PC → iPhone
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  On your PC:
-  → Copy files into the folder:  ~/LocalDrop_Share/
-
-  On your iPhone:
-  → Tap "Get from PC" tab
-  → Tap "Save" next to any file to download it
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  OPTIONAL: QR Code in terminal
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
+- **Python 3.8** or newer (standard on most systems or available at [python.org](https://python.org))
+- Both **PC and iPhone connected to the SAME Wi-Fi network**
+- *(Optional)* `qrcode` package for terminal QR visualization:
+  ```bash
   pip install qrcode
-  Then restart the server — a scannable QR code appears!
+  ```
 
+---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  STOP THE SERVER
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## 🚀 Quick Start
 
-  Press  Ctrl + C  in the terminal window.
+### 1. Start the Server
 
+- **Windows:** Double-click `start_localdrop.bat`
+- **Terminal (Windows / macOS / Linux):**
+  ```bash
+  python3 server.py
+  ```
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  TROUBLESHOOTING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+### 2. Connect Your iPhone
 
-  "iPhone can't connect"
-  → Make sure PC and iPhone are on the SAME Wi-Fi network
-  → Windows: allow Python through Windows Firewall when prompted
+1. A URL like `http://192.168.x.x:8765` will display in your terminal.
+2. **Scan the QR code** in your terminal using your iPhone's camera app *(or manually type the URL into Safari)*.
 
-  "Port already in use"
-  → Open server.py and change PORT = 8765 to another number
+### 3. Transfer Files
 
-  "Photos not showing in iPhone library after download"
-  → In Safari, tap the downloaded file → tap Share → Save Image
+| Transfer Mode | iPhone Steps | File Destination on PC |
+| :--- | :--- | :--- |
+| **📤 iPhone ➔ PC** | Tap **"Send to PC"** tab, pick files/photos | Saved to `~/LocalDrop_Received/` |
+| **📥 PC ➔ iPhone** | Copy files into `~/LocalDrop_Share/`, tap **"Get from PC"** on phone, then tap **Save** | Downloaded to iPhone Safari Downloads |
+
+---
+
+## 🛠️ Troubleshooting
+
+<details>
+<summary><b>❓ "iPhone can't connect to the server"</b></summary>
+
+- Verify that PC and iPhone are connected to the **exact same Wi-Fi network**.
+- Windows Users: Allow Python through **Windows Defender Firewall** when prompted.
+- Ensure AP/Client Isolation is disabled on your Wi-Fi router if applicable.
+</details>
+
+<details>
+<summary><b>❓ "Port already in use"</b></summary>
+
+Open `server.py` in any text editor and change `PORT = 8765` to a different number (e.g., `8766` or `9000`).
+</details>
+
+<details>
+<summary><b>❓ "Photos not showing in iPhone Photo Library after downloading"</b></summary>
+
+In Safari on iOS:
+1. Tap the downloaded file in Safari's download manager.
+2. Tap the **Share** button (box with upward arrow).
+3. Select **Save Image** or **Save Video** to move it to your camera roll.
+</details>
+
+---
+
+## 🛑 Stopping the Server
+
+Press `Ctrl + C` in the terminal window to shut down the server safely.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License — see the repository for details.
