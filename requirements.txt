@@ -1,0 +1,4 @@
+# Optional dependency for rendering scannable QR codes directly in the terminal
+qrcode
+qrcode>=7.0   # optional, for QR code in terminal
+colorama>=0.4 # optional, for colored terminal output
